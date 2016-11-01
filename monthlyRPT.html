@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<title>Discipleship Scorecard | Home</title>
+	</head>
+				
+		<script src="inputNumOnly.js"></script> <!-- To input numbers only dun sa textbox ng YS Attendance at TNOE. -->
+		<script src="textArea1000char.js"></script>
+
+	<div style="position: absolute; top: 20px; left: 255px;">
+		<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Date:</font>
+			<div style="position: absolute; top: 0px; left: 50px;">
+				<select name="selectMonth" style="font-family: 'Source Sans Pro'; font-size: 15px; border: 0px; border-radius: 5px; padding-left: 2px; padding-right: 2px; height: 25px; width: 100px;">
+				  	<option value="1">January</option>
+				  	<option value="2">February</option>
+				  	<option value="3">March</option>
+				  	<option value="4">April</option>
+				  	<option value="5">May</option>
+				  	<option value="6">June</option>
+				  	<option value="7">July</option>
+				  	<option value="8">August</option>
+				  	<option value="9">September</option>
+				  	<option value="10">October</option>
+				  	<option value="11">November</option>
+				  	<option value="12">December</option>
+				</select>
+
+				<div style="position: absolute; top: 0px; left: 105px;">
+					<select name="selectYear" style="font-family: 'Source Sans Pro'; font-size: 15px; border: 0px; border-radius: 5px; padding-left: 2px; padding-right: 2px; height: 25px; width: 70px;">
+					  	<option value="2014">2014</option>
+					  	<option value="2015">2015</option>
+					  	<option value="2016">2016</option>
+					  	<option value="2017">2017</option>
+					  	<option value="2018">2018</option>
+					  	<option value="2019">2019</option>
+					  	<option value="2020">2020</option>
+					</select>
+				</div>
+			</div>
+	</div>
+
+	<div style="position: absolute; top: 55px; left: 230px;">
+		<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Youth Service Attendance:</font>
+		<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4">
+	</div>
+
+	<div style="position: absolute; top: 90px; left: 200px;">
+		<font style="font-family: 'Source Sans Pro'; font-size: 20px; color: #f0f0f0;">Total Number of Envelope Count:</font>
+		<input type="text" style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15; height: 30px; width: 50px; text-align: center;" onkeypress="return isNumber(event)" maxlength="4">
+	</div>
+
+	<!-- Here are the stories: Salvation, Evangelism, etc. -->
+
+	<!-- Salvation Story -->
+		<div style="position: absolute; top: 140px; left: 20px;">
+			<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 18px; color: #f0f0f0;">Salvation Story</font>
+		</div>
+
+		<div style="position: absolute; top: 146px; left: 232px;"> <!-- Display character's length and counts down -->
+			<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #151515; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forSVStory' name="forSVStory" maxlength="4" value="1000" readonly/>
+		</div>
+
+		<div style="position: absolute; top: 145px; left: 275px;">
+			<font style="font-family: 'Source Sans Pro'; font-size: 14px;"><i>characters left</i></font>
+		</div>
+
+		<div style="position: absolute; top: 165px; left: 20px;">
+			<textarea style="font-family: 'Source Sans Pro'; font-size: 15; height: 200px; width: 340px; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forSVStory' ,1000)" name="forSVStory" id="forSVStory" maxlength="1000"></textarea>
+		</div>
+
+	<!-- Evangelism Story -->
+		<div style="position: absolute; top: 140px; left: 385px;">
+			<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 18px; color: #f0f0f0;">Evangelism Story</font>
+		</div>
+
+		<div style="position: absolute; top: 146px; left: 597px;"> <!-- Display character's length and counts down -->
+			<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #151515; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forEVStory' name="forEVStory" maxlength="4" value="1000" readonly/>
+		</div>
+
+		<div style="position: absolute; top: 145px; left: 640px;">
+			<font style="font-family: 'Source Sans Pro'; font-size: 14px;"><i>characters left</i></font>
+		</div>
+
+		<div style="position: absolute; top: 165px; left: 385px;">
+			<textarea style="font-family: 'Source Sans Pro'; font-size: 15; height: 200px; width: 340px; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forEVStory' ,1000)" name="forEVStory" id="forEVStory" maxlength="1000"></textarea>
+		</div>
+
+	<!-- New Victory Weekend Story -->
+		<div style="position: absolute; top: 383px; left: 20px;">
+			<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 16px; color: #f0f0f0;">New Victory Weekend Story</font>
+		</div>
+
+		<div style="position: absolute; top: 386px; left: 232px;"> <!-- Display character's length and counts down -->
+			<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #151515; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forNVWStory' name="forNVWStory" maxlength="4" value="1000" readonly/>
+		</div>
+
+		<div style="position: absolute; top: 385px; left: 275px;">
+			<font style="font-family: 'Source Sans Pro'; font-size: 14px;"><i>characters left</i></font>
+		</div>
+
+		<div style="position: absolute; top: 405px; left: 20px;">
+			<textarea style="font-family: 'Source Sans Pro'; font-size: 15; height: 200px; width: 340px; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forNVWStory' ,1000)" name="forNVWStory" id="forSVStory" maxlength="1000"></textarea>
+		</div>
+
+	<!-- New Victory Group Leader Story -->
+		<div style="position: absolute; top: 384px; left: 385px;">
+			<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 15px; color: #f0f0f0;">New Victory Group Leader Story</font>
+		</div>
+
+		<div style="position: absolute; top: 386px; left: 597px;"> <!-- Display character's length and counts down -->
+			<input type="text" style="font-family: 'Source Sans Pro'; font-size: 14; border: none; background-color: transparent; color: #151515; height: 15px; width: 40px; text-align: right; font-style: italic;" id='forNVGLStory' name="forNVGLStory" maxlength="4" value="1000" readonly/>
+		</div>
+
+		<div style="position: absolute; top: 385px; left: 640px;">
+			<font style="font-family: 'Source Sans Pro'; font-size: 14px;"><i>characters left</i></font>
+		</div>
+
+		<div style="position: absolute; top: 405px; left: 385px;">
+			<textarea style="font-family: 'Source Sans Pro'; font-size: 15; height: 200px; width: 340px; padding-top: 5px; padding-left: 5px; padding-right: 5px; padding-bottom: 5px; resize: none;" onKeyDown="textCounter(this, 1000);" onKeyUp="textCounter(this,'forNVGLStory' ,1000)" name="forNVGLStory" id="forNVGLStory" maxlength="1000"></textarea>
+		</div>
+
+	<!-- Submit button -->
+		<div style="position: absolute; top: 630px; left: 320px;">
+			<input type="button" style="font-size: 16; border-radius: 5px; height: 30px; width: 100px;" value="Submit" id="submit" onclick="#"/> <!-- Clicking the "Login" button calls the loginValidate.js to validate tapos dun sa 'onclick="validate()"' is the function name of loginValidate.js. Pak ganern! -->
+		</div>
+</html>
+

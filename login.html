@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Discipleship Scorecard | Login</title>
+	</head>
+
+	<script src="loginValidate.js"></script> 	<!-- Calling the script file, "loginValidate.js" -->
+	<link rel="stylesheet" href="mystyle.css">  <!-- Calling the CSS file, "mystyle.css" -->
+				
+	<!-- Eto bes yung para sa image ng Discipleship Scorecard -->
+	<!-- Bes gumamit pala ako ng div para sa place position ng image, same lang din sa iba :)-->
+
+	
+				<div style="position: absolute; top: 90px; left: 325px; ">
+					<img src="DSLogo-02.png" alt="Discipleship Scorecard" style="height: 60%; width: 50%;"/>
+				</div>
+
+				<form id="form_id" method="post" name="myForm">
+					<div style="position: absolute; top: 255px; left: 775px;">
+						<!-- Konting design for username textbox -->
+						<input type="text" style="font-family: Source Sans Pro; border-radius: 7px; font-size: 23px; padding-left: 8px; height: 45px; width: 250px;" name="username" id="username" placeholder="username" required/>
+					</div>
+					
+					<div style="position: absolute; top: 305px; left: 775px;">
+						<!-- Konting design for password textbox -->
+						<input type="password" style="font-family: Source Sans Pro; border-radius: 7px; font-size: 23px; padding-left: 8px; height: 45px; width: 250px;" placeholder="password" name="password" id="password" required/>
+					</div>
+
+					<div style="position: absolute; top: 370px; left: 855px;">
+						<!-- Konting design for the button -->
+						<input type="button" style="border-radius: 5px; height: 35px; width: 85px;" value="Login" id="submit" onclick="validate()"/> <!-- Clicking the "Login" button calls the loginValidate.js to validate tapos dun sa 'onclick="validate()"' is the function name of loginValidate.js. Pak ganern! -->
+					</div>
+				</form>
+	
+</html>
+
