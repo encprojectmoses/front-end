@@ -1,0 +1,10 @@
+/* Ginawa ko po munang 768 yung height and 1000 yung width kasi po di ko po sure yung common na screen size*/
+
+body
+	{
+		height: 100%; 
+		width: auto;
+		background: linear-gradient(to top right, #20457e, #487ed0);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}

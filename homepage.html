@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Discipleship Scorecard | Home</title>
+	</head>
+
+	<link rel="stylesheet" href="mystyle.css"> <!-- Calling the CSS file, "mystyle.css" -->
+	<link rel="stylesheet" href="navBar-Homepage.css">  <!-- Calling the CSS file of Navigation Menu Bar, "navBar-Homepage.css" -->
+				
+	<div style="position: absolute; top: -20px; left: 200px;">
+		<img src="DSLogo-02.png" alt="Discipleship Scorecard" width="20%"/>
+	</div>
+
+	<!-- 
+	Under nito, ginamit ko po yung power ng iFrame hahaha xD 
+	iFrame means tinatawag niya nalang niya yung HTML files at ilalagay sa baba ng homepage lang. 
+	naka-set din po yung height and width ng iFrame.
+	-->
+
+	<div style="position: absolute; top: 110px; left: 175px;">
+		<iframe src="" name="iFrame-Homepage" style="height: 800px; width: 1000px;"></iframe>
+	</div>
+
+	<div style="position: absolute; top: 68px; left: 390px;">
+		<font style="font-family:'Source Sans Pro'; font-size: 15px;">
+		<ul>
+		    <li><a class="active" href="#home">Home</a></li>
+		    <li class="dropdown">
+			    <a href="#" class="dropbtn">Reports</a>
+				    <div class="dropdown-content">
+					    <a href="iframe_createReport.html" target="iFrame-Homepage">Create a Report</a> <!-- Calling the iframe_createReport.html -->
+					    <a href="iframe_viewReport.html" target="iFrame-Homepage">View Reports</a> <!-- Calling the iframe_createReport.html -->
+				    </div>
+		    </li>
+			<li><a class="account" href="#">Welcome, Jonas!</a></li>
+		</ul>
+	</div>
+
+</html>
+

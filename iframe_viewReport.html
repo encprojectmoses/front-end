@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Discipleship Scorecard | Create Report</title>
+	</head>
+
+	<div style="position: absolute; top: 20px; left: 20px;">
+		<font style="font-family: 'Source Sans Pro'; font-weight: 600; font-size: 30px; color: #f0f0f0;">View Reports</font>
+	</div>
+
+	<div style="position: absolute; top: 25px; left: 775px;">
+		<select name="reportsOption" style="font-family: 'Source Sans Pro'; font-size: 15px; border: none; border-radius: 5px; padding-left: 2px; padding-right: 2px; height: 30px; width: 200px;" onChange="document.getElementById('iFrame-Reports').src = this.value;">
+		  	<option value="">Please select an option..</option>
+		  	<option value="view_monthlyRPT.html">For Monthly Report</option>
+		  	<option value="view_quarterlyRPT.html">For Quarterly Report</option>
+		  	<option value="view_weeklyRPT.html">For Weekly Report</option>
+		  	<option value="view_dailyRPT.html">For Daily Report</option>
+		</select>
+	</div>
+
+	<div style="position: absolute; top: 55px; left: 20px;">
+		<hr style="background: linear-gradient(to right, #f0f0f0, rgba(255,0,0,0)); height: 4px; width: 960px; border: none;">
+	</div>
+				
+	<div style="position: absolute; top: 80px; left: 20px;">
+		<iframe src="" id="iFrame-Reports" name="iFrame-Reports" style="height: 700px; width: 955px;"></iframe>
+	</div>
+
+</html>
+
