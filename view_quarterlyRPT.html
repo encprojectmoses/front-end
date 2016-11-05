@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Discipleship Scorecard | Home</title>
+        <link rel="stylesheet" href="mystyle.css">  <!-- Calling the CSS file, "mystyle.css" -->
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
         <script type="text/javascript" src="js/highcharts/modules/exporting.js"></script>
@@ -17,8 +18,8 @@
 		<!-- Clicking the "Login" button calls the loginValidate.js to validate tapos dun sa 'onclick="validate()"' is the function name of loginValidate.js. Pak ganern! -->
 		</div>
 
-		<div style="position: absolute; top: 45px; left: 5px;">
-			<table border="1" style="width: 945px; font-family: 'Source Sans Pro'; font-size: 20; ">
+		<div class="reports"  style="position: absolute; top: 45px; left: 5px;">
+			<table class="quarterlyReport" class="reports" style="width: 945px; font-family: 'Source Sans Pro'; font-size: 20; ">
 				<tr>
 					<th>Date</th>
 					<th>Number of Coaches</th>
@@ -55,7 +56,7 @@
 					<td>341</td>
 				</tr>
 			</table>
-			<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+			<div id="container" class="quarterlyGraph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 		</div>
 	</body>
