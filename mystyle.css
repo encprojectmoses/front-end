@@ -19,6 +19,9 @@ table.quarterlyReport
     border-collapse: collapse;
     border-spacing: 0;
     background-color: white;
+    width: 945px;
+    font-family: 'Source Sans Pro';
+    font-size: 20; 
 }
 
 table.quarterlyReport th, td {
@@ -43,4 +46,9 @@ table.quarterlyReport tr:nth-child(odd) td { background: #FEFEFE; }
 
 .quarterlyGraph {
     padding-top: 10px;
+    padding-bottom: 30px;
+    width: 100%:
+    min-width: 310px;
+    height: 400px;
+    margin: 0 auto
 }
