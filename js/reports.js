@@ -1,56 +1,82 @@
+var quarterReportJson = "[{\"year\":\"2016\",\"quarters\":[{\"date\":\"JAN-MAR2016\",\"numberOfCoaches\":0,\"numberOfVgLeaders\":454,\"numberOfVgMembers\":2184,\"numberOfVictoryGroups\":479},{\"date\":\"APR-JUN2016\",\"numberOfCoaches\":34,\"numberOfVgLeaders\":327,\"numberOfVgMembers\":1529,\"numberOfVictoryGroups\":326},{\"date\":\"JUL-SEP2016\",\"numberOfCoaches\":53,\"numberOfVgLeaders\":306,\"numberOfVgMembers\":1199,\"numberOfVictoryGroups\":292},{\"date\":\"OCT-DEC2016\",\"numberOfCoaches\":47,\"numberOfVgLeaders\":255,\"numberOfVgMembers\":1540,\"numberOfVictoryGroups\":341}]}]";
+
 function initQuarterlyReport()
 {
-	console.log("initQuarterlyReport");
-	$('#container').highcharts({
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'DISCIPLESHIP SUMMARY'
-        },
-        xAxis: {
-            categories: [
-                'LEADERSHIP GROUP',
-                'VG LEADERS',
-                'VG MEMBERS',
-                'VICTORY GROUPS',
-            ],
-            crosshair: true
-        },
+ 
+    console.log("initQuarterlyReport");
+    
+    
+    //TODO replace with actual asynchronous request from server
+    var quarterJsonObj = JSON.parse(quarterReportJson);
+    
+    //create table and graph for each content
+    for(var i=0; i<quarterJsonObj.length; i++)
+    {
         
-        tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:f}</b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
-        },
-        plotOptions: {
-            column: {
-                 dataLabels: {
-                    enabled: true
-                },
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
-        },
-        series: [{
-            name: 'NOV2014 - MAR2015',
-            data: [0, 454, 2184, 479]
+        
+        var options = {
+            chart: {
+            renderTo: 'container',
+            type: 'column'
+            },
 
-        }, {
-            name: 'JUN2015 - SEP2015',
-            data: [34, 327, 1529, 326]
+            title: {
+                text: 'DISCIPLESHIP SUMMARY'
+            },
+            xAxis: {
+                categories: [
+                    'LEADERSHIP GROUP',
+                    'VG LEADERS',
+                    'VG MEMBERS',
+                    'VICTORY GROUPS',
+                ],
+                crosshair: true
+            },
 
-        }, {
-            name: 'NOV2015 - APR2016',
-            data: [53, 306, 1199, 292]
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:f}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                     dataLabels: {
+                        enabled: true
+                    },
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
 
-        }, {
-            name: 'JUN2016 - SEP2016',
-            data: [47, 255, 1540, 341]
+            series: []
+        };
+        
+        
+        
+        for(var j=0; j<quarterJsonObj[i].quarters.length; j++)
+        {
+            
+            var sampleObject = {
+                name: quarterJsonObj[i].quarters[j].date,
+                data: [quarterJsonObj[i].quarters[j].numberOfCoaches,
+                       quarterJsonObj[i].quarters[j].numberOfVgLeaders,
+                       quarterJsonObj[i].quarters[j].numberOfVgMembers,
+                       quarterJsonObj[i].quarters[j].numberOfVictoryGroups]
+            };
 
-        }]
-    });
+            options.series.push(sampleObject);
+            
+        }   
+        
+        var chart = new Highcharts.Chart(options);
+        
+        //console.log(quarterJsonObj[i].date+", "+quarterJsonObj[i].numberOfCoaches+", "+quarterJsonObj[i].numberOfVgLeaders+", "+quarterJsonObj[i].numberOfVgMembers+", "+quarterJsonObj[i].numberOfVictoryGroups);
+    }
+    
+    
+    
+
 }
