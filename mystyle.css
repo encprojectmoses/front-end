@@ -1,5 +1,9 @@
 /* Ginawa ko po munang 768 yung height and 1000 yung width kasi po di ko po sure yung common na screen size*/
 
+html, body, html *, body * {
+    font-family: 'Open Sans',sans-serif;
+}
+
 body
 	{
 		height: 100%; 
@@ -20,13 +24,13 @@ table.quarterlyReport
     border-spacing: 0;
     background-color: white;
     width: 945px;
-    font-family: 'Source Sans Pro';
     font-size: 20; 
 }
 
 table.quarterlyReport th, td {
     border: 1px solid black;
-    text-align: center;    
+    text-align: center;
+    vertical-align: middle;
 }
 
 table.quarterlyReport th {
