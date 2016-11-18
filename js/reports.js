@@ -112,86 +112,78 @@ function initMonthlyReport()
     //TODO replace with actual asynchronous request from server
     var monthlyJsonObj = JSON.parse(monthlyReportJson);
     
-    /*<tr>
-        <td style="background-color: #2980b9;">
-            <font style="font-size: 25px; color: #f0f0f0;"><b>November 2016</b></font>
-        </td>
-        <td align="right" style="background-color: #2980b9;">
-            <font style="font-size: 20px; color: #f0f0f0;"><b>Monthly Report</b></font>
-        </td>
-    </tr>*/
-    
      //table initialization
-    var table = $('<table></table>').addClass('quarterlyReport');
+    var table = $('<table></table>').addClass('monthlyReport');
     var tr = '<tr>' ;
-    tr += "<td style=\"background-color: #2980b9;\">";
-    tr += "<font style=\"font-size: 25px; color: #f0f0f0;\"><b>"+monthlyJsonObj.date+"</b></font>";
-    tr += "</td>";
-    tr += "<td align=\"right\" style=\"background-color: #2980b9;\">";
-    tr += "<font style=\"font-size: 20px; color: #f0f0f0;\"><b>Monthly Report</b></font>";
-    tr += "</td>";
+    tr += "<td class=\"inputtedMonthYear\">"+monthlyJsonObj.date+"</td>";
+    tr += "<td class=\"ReportTitle\">Monthly Report</td>";
     tr += '</tr>';
     table.append(tr);
 
-    tr = '<tr>' ;
-    tr += "<td rowspan=\"2\" align=\"center\" style=\"background-color: #f0f0f0\">";
-    tr += "<font style=\"font-size: 40px; color: #151515; display: block;\"><b>"+monthlyJsonObj.youthServiceAttendance+"</b></font>";
-    tr += "<font style=\"font-size: 13px; color: #151515;\">YOUTH SERVICE ATTENDANCE</font>";
-    tr += "</td>";
-    tr += "<td rowspan=\"2\" align=\"center\" style=\"background-color: #f0f0f0\">";
-    tr += "<font style=\"font-size: 40px; color: #151515; display: block;\"><b>"+monthlyJsonObj.tnoeCount+"</b></font>";
-    tr += "<font style=\"font-size: 13px; color: #151515;\">TNOE COUNT</font>";
-    tr += "</td>";
-    tr += '</tr>';
-    table.append(tr);
-    
-    
-    tr = "<tr style=\"height: 20px;\">";
-    tr += "</tr>";
-    table.append(tr);
-    
+
     tr = "<tr>";
-    tr += "<td colspan=\"2\" style=\"background-color: #2980b9\">";
-    tr += "<font style=\"font-size: 20px; color: #f0f0f0;\"><b>Salvation Story</b></font>";
+    tr += "<td class=\"CountPart\">";
+    tr += "<font style=\"font-size: 40px;\"><b>4062</b></font>";
+    tr += "<br/>";
+    tr += "<font style=\"font-size: 13px;\">YOUTH SERVICE ATTENDANCE</font>";
     tr += "</td>";
-    tr += "</tr>";
-    table.append(tr);
-            
-    tr = "<tr>";
-    tr += "<td colspan=\"2\" style=\"background-color: #f0f0f0\">";
-    tr += "<font style=\"font-size: 17px; color: #151515; font-style: italic;\">"+monthlyJsonObj.salvationStory+"</font>";
+    tr += "<td class=\"CountPart\">";
+    tr += "<font style=\"font-size: 40px;\"><b>3586</b></font>";
+    tr += "<br/>";
+    tr += "<font style=\"font-size: 13px;\">TNOE COUNT</font>";
     tr += "</td>";
     tr += "</tr>";
     table.append(tr);
     
+    //salvation start
     tr = "<tr>";
-    tr += "<td colspan=\"2\" style=\"background-color: #2980b9\">";
-    tr += "<font style=\"font-size: 20px; color: #f0f0f0;\"><b>New Victory Weekend Story</b></font>";
-    tr += "</td>";
+    tr += "<td class=\"LabelStories\" colspan=\"2\">Salvation Story</td>";
     tr += "</tr>";
     table.append(tr);
-            
+
     tr = "<tr>";
-    tr += "<td colspan=\"2\" style=\"background-color: #f0f0f0\">";
-    tr += "<font style=\"font-size: 17px; color: #151515; font-style: italic;\">"+monthlyJsonObj.newVictoryWeekendStory+"</font>";
-    tr += "</td>";
+    tr += "<td class=\"DescStories\" colspan=\"2\">"+monthlyJsonObj.salvationStory+"</td>";
     tr += "</tr>";
     table.append(tr);
+    //salvation end
+
+    //evangelism story start
+    tr = "<tr>";
+    tr += "<td class=\"LabelStories\" colspan=\"2\">Evangelism Story</td>";
+    tr += "</tr>";
+    table.append(tr);
+                
+    tr = "<tr>";
+    tr += "<td class=\"DescStories\" colspan=\"2\">"+monthlyJsonObj.evangelismStory+"</td>"; //TODO
+    tr += "</tr>";
+    table.append(tr);
+    //evangelism story end
     
+
+    //new victory weekend story start
     tr = "<tr>";
-    tr += "<td colspan=\"2\" style=\"background-color: #2980b9\">";
-    tr += "<font style=\"font-size: 20px; color: #f0f0f0;\"><b>New Victory Group Leader Story</b></font>";
-    tr += "</td>";
+    tr += "<td class=\"LabelStories\" colspan=\"2\">New Victory Weekend Story</td>";
     tr += "</tr>";
     table.append(tr);
-            
+                
     tr = "<tr>";
-    tr += "<td colspan=\"2\" style=\"background-color: #f0f0f0\">";
-    tr += "<font style=\"font-size: 17px; color: #151515; font-style: italic;\">"+monthlyJsonObj.newVictoryGroupLeaderStory+"</font>";
-    tr += "</td>";
+    tr += "<td class=\"DescStories\" colspan=\"2\">"+monthlyJsonObj.newVictoryWeekendStory+"</td>"; //TODO
     tr += "</tr>";
     table.append(tr);
-    
+    //new victory weekend story end
+
+    //new victory weekend story start
+    tr = "<tr>";
+    tr += "<td class=\"LabelStories\" colspan=\"2\">New Victory Group Leader Story</td>";
+    tr += "</tr>";
+    table.append(tr);
+                
+    tr = "<tr>";
+    tr += "<td class=\"DescStories\" colspan=\"2\">"+monthlyJsonObj.newVictoryGroupLeaderStory+"</td>"; //TODO
+    tr += "</tr>";
+    table.append(tr);
+    //new victory weekend story end
+   
     
     var ysAttendanceContainer = $('<div></div>').addClass('quarterlyGraph').attr('id', 'ysAttendanceGraph');
         
