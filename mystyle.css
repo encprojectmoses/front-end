@@ -50,8 +50,6 @@ table.quarterlyReport tr:nth-child(even) td { background: #F1F1F1; }
 table.quarterlyReport tr:nth-child(odd) td { background: #FEFEFE; }
 
 .quarterlyGraph {
-    padding-top: 10px;
-    padding-bottom: 30px;
     width: 100%:
     min-width: 310px;
     height: 400px;
@@ -115,3 +113,5 @@ table.monthlyReport td.DescStories /* Stories of SV, EVS, NVWS, NVGLS */
     font-style: italic;
     color: #151515;
 }
+
+

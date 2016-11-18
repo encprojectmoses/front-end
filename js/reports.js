@@ -184,8 +184,6 @@ function initMonthlyReport()
     table.append(tr);
     //new victory weekend story end
    
-    
-    var ysAttendanceContainer = $('<div></div>').addClass('quarterlyGraph').attr('id', 'ysAttendanceGraph');
         
     //chart initialization
     var ysOptions = {
@@ -214,7 +212,7 @@ function initMonthlyReport()
         }]
     };
     
-    var tnoeContainer = $('<div></div>').addClass('quarterlyGraph').attr('id', 'tnoeGraph');
+    //var tnoeContainer = $('<div></div>').addClass('quarterlyGraph').attr('id', 'tnoeGraph');
         
     //chart initialization
     var tneoOptions = {
@@ -243,13 +241,17 @@ function initMonthlyReport()
         }]
     };
     
-    
-    
+
+    tr = "<tr>";
+    tr += "<td rowspan=\"2\" colspan=\"2\" style='padding-top: 20px;'>";
+    tr += "<div class=\"quarterlyGraph\" id=\"ysAttendanceGraph\"></div><br/>";
+    tr += "<div class=\"quarterlyGraph\" id=\"tnoeGraph\"></div>";
+    tr += "</td>"; //TODO
+    tr += "</tr>";
+    table.append(tr);
     
     
     $("#report").append(table);
-    $("#report").append(ysAttendanceContainer);
-    $("#report").append(tnoeContainer);
         
     var chart = new Highcharts.Chart(ysOptions);
     chart = new Highcharts.Chart(tneoOptions);
