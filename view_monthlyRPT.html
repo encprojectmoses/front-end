@@ -1,50 +1,61 @@
 <html>
 	<head>
-		<title>Discipleship Scorecard | Home</title>
+		<title>Discipleship Scorecard | View a Monthly Report</title>
+
+		<link rel="stylesheet" type="text/css" href="everyRPT.css"> 
 	</head>
 
-		<div style="position: absolute; top: 0px; left: 750px;">
-			<input type="button" style="font-family: 'Source Sans Pro'; font-size: 16; border-radius: 5px; height: 35px; width: 200px;" value="Download as PDF File" id="submit" onclick="#"/> <!-- Clicking the "Login" button calls the loginValidate.js to validate tapos dun sa 'onclick="validate()"' is the function name of loginValidate.js. Pak ganern! -->
-		</div>
+	<body>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			<div class="RPTContainer">
+				<font style="font-family: 'Source Sans Pro'; font-size: 30px; font-weight: 600; color: #f0f0f0;">View A Monthly Report</font></br>
+				<font style="font-family: 'Source Sans Pro'; font-size: 30px; font-weight: 600; color: #f0f0f0;">for the month of:</font></br></br>
+					<select name="selectMonth" style="font-family: 'Source Sans Pro'; font-size: 25px; border: 2px solid gray; border-radius: 10px; text-align: center; height: 40px; width: 175px;">
+					  	<option value="1">January</option>
+					  	<option value="2">February</option>
+					  	<option value="3">March</option>
+					  	<option value="4">April</option>
+					  	<option value="5">May</option>
+					  	<option value="6">June</option>
+					  	<option value="7">July</option>
+					  	<option value="8">August</option>
+					  	<option value="9">September</option>
+					  	<option value="10">October</option>
+					  	<option value="11" selected>November</option>
+					  	<option value="12">December</option>
+					</select>
 
-		<div style="position: absolute; top: 45px; left: 5px;">
-		<table border="1" style="width: 945px; font-family: 'Source Sans Pro'; font-size: 20; ">
-			  <tr>
-			    <th colspan="3" align="left">October 2016</th>
-			  </tr>
-			  <tr>
-			    <td>Youth Service Attendance</td>
-			    <td>TNO Envelope</td>
-			  </tr>
-			  <tr>
-			    <td>245</td>
-			    <td>189</td>
-			  </tr>
-			  <tr>
-			    <td><b>Salvation Story</b></td>
-			  </tr>
-			  <tr>
-			    <td>some text here</td>
-			  </tr>
-			  <tr>
-			    <td><b>Evangelism Story</b></td>
-			  </tr>
-			  <tr>
-			    <td>some text here</td>
-			  </tr>
-			  <tr>
-			    <td><b>New Victory Group Leader Story</b></td>
-			  </tr>
-			  <tr>
-			    <td>some text here</td>
-			  </tr>
-			  <tr>
-			    <td><b>New Victory Weekend Story</b></td>
-			  </tr>
-			  <tr>
-			    <td>some text here</td>
-			  </tr>
-		</table>
-		</div>
+					<select name="selectYear" style="font-family: 'Source Sans Pro'; font-size: 25px; border: 2px solid gray; border-radius: 10px; text-align: center; height: 40px; width: 100px;">
+					  	<option value="2014">2014</option>
+					  	<option value="2015">2015</option>
+					  	<option value="2016" selected>2016</option>
+					  	<option value="2017">2017</option>
+					  	<option value="2018">2018</option>
+					  	<option value="2019">2019</option>
+					  	<option value="2020">2020</option>
+					</select>
+
+					</br></br>
+					<input type="button" value="View Report" id="submit" onclick="window.location = 'sampleRPT.html';" style="font-size: 18px; height: 35px; width: 160px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #2ecc71; color: #f0f0f0;" />
+			</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</body>
 </html>
-
