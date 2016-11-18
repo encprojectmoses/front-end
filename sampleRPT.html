@@ -5,6 +5,7 @@
         <script type="text/javascript" src="js/highcharts/highcharts.js"></script>
         <script type="text/javascript" src="js/highcharts/modules/exporting.js"></script>
         <script type="text/javascript" src="js/reports.js"></script>
+        <script type="text/javascript" src="js/toPDF.js"></script>
         <script type="text/javascript">
 	        $(function () {
 				initMonthlyReport();
@@ -12,10 +13,8 @@
 		</script>
 	</head>
 	<body>
-        <form method="get" action="file.doc">
 		<div id="report" align="center">
-			<button type="submit">Download!</button>
+			<input class="no-print" type="button" style="font-family: 'Source Sans Pro'; font-size: 16; border-radius: 5px; height: 35px; width: 200px; float: right;" value="Download as PDF File" id="submit" onclick="printMessage(this.id,this.baseURI);" />
 		</div>
-        </form>
 	</body>
 </html>

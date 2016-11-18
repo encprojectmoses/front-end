@@ -115,3 +115,11 @@ table.monthlyReport td.DescStories /* Stories of SV, EVS, NVWS, NVGLS */
 }
 
 
+/*hide print button*/
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
