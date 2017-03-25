@@ -1,26 +1,52 @@
 /* Eto po yung validate() na galing dun sa button ng Login.*/
 
-function validate()
+function validate(e)
 	{
 		var username = document.getElementById("username").value;
 		var password = document.getElementById("password").value;
 
-		if (username == "username" && password == "password")
+		if (e.keyCode == 13)
 		{
-			alert("Login successful."); //tapos magreredirect sa homepage.html
-			window.location = "homepage.html";
+			if (username == "username" && password == "password")
+			{
+				window.location = "homepage.html"; // Redirecting to homepage.html
 
-			return false;
-		}
-		else if (username == "" && password == "")
-		{
-			alert("Please enter your username and password."); 
+				return false;
+			}
+			else if (username == "" && password == "")
+			{
+				document.getElementById('alertValidation').innerHTML = "Please enter your" + "<br>" +"username and password.";
 
-			return false;
-		}
+				return false;
+			}
 
-		else
-		{
-			alert("Login failed. Please try again.");
+			else
+			{
+				document.getElementById('alertValidation').innerHTML = "<font color='red'>" + "Login failed! Please try again.";
+			}
 		}
+	}
+
+function onClick(e) //for button of "Login"
+	{
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+				if (username == "username" && password == "password")
+				{
+					window.location = "homepage.html"; // Redirecting to homepage.html
+
+					return false;
+				}
+				else if (username == "" && password == "")
+				{
+					document.getElementById('alertValidation').innerHTML = "Please enter your" + "<br>" +"username and password.";
+
+					return false;
+				}
+
+				else
+				{
+					document.getElementById('alertValidation').innerHTML = "<font color='red'>" + "Login failed! Please try again.";
+				}
 	}

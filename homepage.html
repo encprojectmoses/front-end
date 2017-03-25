@@ -1,39 +1,50 @@
 <html>
 	<head>
 		<title>Discipleship Scorecard | Home</title>
+
+		<link rel="stylesheet" type="text/css" href="bgDisplay.css">
+		<link rel="stylesheet" type="text/css" href="navBar-Homepage.css">  
+		<link rel="stylesheet" type="text/css" href="homepage-style.css">
+
+		<script src="fullsize-iframe.js"></script>
 	</head>
 
-	<link rel="stylesheet" href="mystyle.css"> <!-- Calling the CSS file, "mystyle.css" -->
-	<link rel="stylesheet" href="navBar-Homepage.css">  <!-- Calling the CSS file of Navigation Menu Bar, "navBar-Homepage.css" -->
-				
-	<div style="position: absolute; top: -20px; left: 200px;">
-		<img src="DSLogo-02.png" alt="Discipleship Scorecard" width="20%"/>
-	</div>
+		<body>
 
-	<!-- 
-	Under nito, ginamit ko po yung power ng iFrame hahaha xD 
-	iFrame means tinatawag niya nalang niya yung HTML files at ilalagay sa baba ng homepage lang. 
-	naka-set din po yung height and width ng iFrame.
-	-->
+			<div align="center" style="position: relative; top: 25%;">
+				<iframe src="dashboard.html" id="iFrame-Homepage" name="iFrame-Homepage" width="91%" height="900"></iframe>
+			</div>
 
-	<div style="position: absolute; top: 110px; left: 175px;">
-		<iframe src="" name="iFrame-Homepage" style="height: 800px; width: 1000px;"></iframe>
-	</div>
 
-	<div style="position: absolute; top: 68px; left: 390px;">
-		<font style="font-family:'Source Sans Pro'; font-size: 15px;">
-		<ul>
-		    <li><a class="active" href="#home">Home</a></li>
-		    <li class="dropdown">
-			    <a href="#" class="dropbtn">Reports</a>
-				    <div class="dropdown-content">
-					    <a href="iframe_createReport.html" target="iFrame-Homepage">Create a Report</a> <!-- Calling the iframe_createReport.html -->
-					    <a href="iframe_viewReport.html" target="iFrame-Homepage">View Reports</a> <!-- Calling the iframe_createReport.html -->
-				    </div>
-		    </li>
-			<li><a class="account" href="#">Welcome, Jonas!</a></li>
-		</ul>
-	</div>
+			<div class="homepageContainer">
+				<table>
+						<tr>
+							<td width="20%">
+								<center>
+									<img src="DSLogo-02.png" width="100%" style="position: relative;"/>
+								</center>
+							</td>
+							<td width="80%" valign="bottom" style="position: absolute; top: 150px;">
+								<font style="font-family:'Source Sans Pro'; font-size: 15px;">
+								<ul>
+								    <li><a class="active" href="#home">Home</a></li>
+								    <li class="dropdown">
+									    <a href="#" class="dropbtn">Reports</a>
+										    <div class="dropdown-content">
+											    <a href="iframe_createReport.html" target="iFrame-Homepage" name="createRPT" onclick="document.title='Discipleship Scorecard | Create A Report';">Create a Report</a> <!-- Calling the iframe_createReport.html -->
+											    <a href="iframe_viewReport.html" target="iFrame-Homepage" onclick="document.title='Discipleship Scorecard | View Reports';">View Reports</a> <!-- Calling the iframe_createReport.html -->
+										    </div>
+								    </li>
+									<li><a class="account" href="#">Welcome, Jonas!</a></li>
+								</ul>
+							</td>
+						</tr>
+				</table>
+			</div>
+
+
+		</body>
+
 
 </html>
 

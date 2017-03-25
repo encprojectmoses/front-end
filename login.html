@@ -1,35 +1,57 @@
 <html>
 	<head>
 		<title>Discipleship Scorecard | Login</title>
+
+
+		<link rel="stylesheet" type="text/css" href="bgDisplay.css">
+		<link rel="stylesheet" type="text/css" href="loginStyle.css">
+		<script src="loginValidate.js"></script>
+
 	</head>
+	 
+	<body bgcolor="black">
+		<div class="fixWorldMap">
+			<img src="worldmap-fx.png" width="100%"/>
+		</div>
 
-	<script src="loginValidate.js"></script> 	<!-- Calling the script file, "loginValidate.js" -->
-	<link rel="stylesheet" href="mystyle.css">  <!-- Calling the CSS file, "mystyle.css" -->
-				
-	<!-- Eto bes yung para sa image ng Discipleship Scorecard -->
-	<!-- Bes gumamit pala ako ng div para sa place position ng image, same lang din sa iba :)-->
+		<div class="loginContainer">
+			<table>
+				<tr>
+					<td width="450">
+						<center>
+							<img src="DSLogo-02.png" width="100%"/>
+						</center>
+					</td>
 
-	
-				<div style="position: absolute; top: 90px; left: 325px; ">
-					<img src="DSLogo-02.png" alt="Discipleship Scorecard" style="height: 60%; width: 50%;"/>
-				</div>
+					<td width="300">
 
-				<form id="form_id" method="post" name="myForm">
-					<div style="position: absolute; top: 255px; left: 775px;">
-						<!-- Konting design for username textbox -->
-						<input type="text" style="font-family: Source Sans Pro; border-radius: 7px; font-size: 23px; padding-left: 8px; height: 45px; width: 250px;" name="username" id="username" placeholder="username" required/>
-					</div>
-					
-					<div style="position: absolute; top: 305px; left: 775px;">
-						<!-- Konting design for password textbox -->
-						<input type="password" style="font-family: Source Sans Pro; border-radius: 7px; font-size: 23px; padding-left: 8px; height: 45px; width: 250px;" placeholder="password" name="password" id="password" required/>
-					</div>
+						<form id="form_id" method="post" name="myForm">
+							<center>
 
-					<div style="position: absolute; top: 370px; left: 855px;">
-						<!-- Konting design for the button -->
-						<input type="button" style="border-radius: 5px; height: 35px; width: 85px;" value="Login" id="submit" onclick="validate()"/> <!-- Clicking the "Login" button calls the loginValidate.js to validate tapos dun sa 'onclick="validate()"' is the function name of loginValidate.js. Pak ganern! -->
-					</div>
-				</form>
-	
+								<div id="alertValidation" class="labelAlertValidation" style="position: relative; top: 20px; ">
+								<!-- This is where you put "Login failed! Please try again." or "Please enter your username and password." -->
+								</div> 
+
+								<div style="position: relative; top: 45px;">
+									<input type="text" name="username" id="username" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="username" required/>
+								</div>
+
+								<div style="position: relative; top: 50px;">
+									<input type="password" name="password" id="password" onkeypress="return validate(event)" style="font-size: 18px; height: 40px; width: 225px; background-color: #f5f5f5; padding-left: 8px; padding-right: 8px; border: 2px solid gray; border-radius: 5px;" placeholder="password" required/>
+								</div>
+
+								<div style="position: relative; top: 60px;">
+									<input type="button" value="Login" id="submit" onclick="return onClick(event)" style="font-size: 16px; height: 35px; width: 80px; border-radius: 5px; border: 2px solid #f0f0f0; background-color: #2980b9; color: #f0f0f0;" />
+								</div>
+							</center>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+
+
 </html>
 
